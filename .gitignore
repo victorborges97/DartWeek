@@ -9,6 +9,7 @@
 /delivery_app/.flutter-plugins
 /delivery_app/.flutter-plugins-dependencies
 /delivery_app/.packages
+/delivery_app/pubspec.lock
 /delivery_app/.pub-cache/
 /delivery_app/.pub/
 /delivery_app/build/
