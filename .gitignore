@@ -1,2 +1,14 @@
 /.vscode
 /delivery_app/*.env
+
+
+# Flutter/Dart/Pub related
+/delivery_app/**/doc/api/
+/delivery_app/**/ios/Flutter/.last_build_id
+/delivery_app/.dart_tool/
+/delivery_app/.flutter-plugins
+/delivery_app/.flutter-plugins-dependencies
+/delivery_app/.packages
+/delivery_app/.pub-cache/
+/delivery_app/.pub/
+/delivery_app/build/
