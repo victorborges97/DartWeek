@@ -11,10 +11,13 @@ abstract class BaseState<T extends StatefulWidget, C extends BlocBase> extends S
   void initState() {
     super.initState();
     controller = context.read<C>();
+    onInit();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       onReady();
     });
   }
+
+  void onInit() {}
 
   void onReady() {}
 }
