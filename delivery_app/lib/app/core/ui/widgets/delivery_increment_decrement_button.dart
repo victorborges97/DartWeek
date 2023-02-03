@@ -3,6 +3,7 @@ import 'package:delivery_app/app/core/ui/styles/text_app.dart';
 import 'package:flutter/material.dart';
 
 class DeliveryIncrementDecrementButton extends StatelessWidget {
+  final bool _compact;
   final int amout;
   final VoidCallback incrementPress;
   final VoidCallback decrementPress;
@@ -12,11 +13,19 @@ class DeliveryIncrementDecrementButton extends StatelessWidget {
     required this.amout,
     required this.incrementPress,
     required this.decrementPress,
-  });
+  }) : _compact = false;
+
+  const DeliveryIncrementDecrementButton.compact({
+    super.key,
+    required this.amout,
+    required this.incrementPress,
+    required this.decrementPress,
+  }) : _compact = true;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: _compact ? const EdgeInsets.all(5) : null,
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.grey,
@@ -33,7 +42,7 @@ class DeliveryIncrementDecrementButton extends StatelessWidget {
               child: Text(
                 "-",
                 style: context.textApp.textMedium.copyWith(
-                  fontSize: 22,
+                  fontSize: _compact ? 10 : 22,
                   color: Colors.grey,
                 ),
               ),
@@ -42,7 +51,7 @@ class DeliveryIncrementDecrementButton extends StatelessWidget {
           Text(
             amout.toString(),
             style: context.textApp.textRegular.copyWith(
-              fontSize: 17,
+              fontSize: _compact ? 13 : 17,
               color: context.colors.secundary,
             ),
           ),
@@ -53,7 +62,7 @@ class DeliveryIncrementDecrementButton extends StatelessWidget {
               child: Text(
                 "+",
                 style: context.textApp.textMedium.copyWith(
-                  fontSize: 22,
+                  fontSize: _compact ? 10 : 22,
                   color: Colors.grey,
                 ),
               ),
