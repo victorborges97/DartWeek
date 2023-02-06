@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:delivery_app/app/dto/order_product_dto.dart';
 import 'package:delivery_app/app/pages/home/home_state.dart';
 import 'package:delivery_app/app/repositories/products/products_repository.dart';
+import 'package:flutter/material.dart';
 
 class HomeController extends Cubit<HomeState> {
   final ProductsRepository _productsRepository;
@@ -41,6 +42,6 @@ class HomeController extends Cubit<HomeState> {
 
     emit(state.copyWith(shoppingBag: shoppingBag));
 
-    print(state.shoppingBag.toString());
+    debugPrint(state.shoppingBag.toString());
   }
 }

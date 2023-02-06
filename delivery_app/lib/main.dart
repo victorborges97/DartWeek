@@ -5,5 +5,5 @@ import 'package:flutter/material.dart';
 void main() async {
   await Env.i.load();
 
-  runApp(DeliveryApp());
+  runApp(const DeliveryApp());
 }

@@ -13,7 +13,7 @@ class OrderRouter {
         ],
         builder: (context, child) {
           final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-          print(args);
+          debugPrint(args.toString());
           return const OrderPage(
             bag: [], //args["bag"],
           );
